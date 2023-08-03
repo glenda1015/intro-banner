@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particles</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Link of article that helped me https://dev.to/satvikchachra/how-to-add-an-awesome-readme-to-your-github-profile-361n -->
+    <!-- Link of emoji images https://www.svgrepo.com/svg/492551/happy-2 -->
+
+    <!-- Steps
+    - Record video and download it 1080 
+    - Video to GIF converter: https://cloudconvert.com/mp4-to-gif
+    - Compres it with factorty video
+    - Upload it to github via command or github desktop
+     -->
+    <!-- particles.js container --> 
+    <div id="particles-js">
+        <div id="typewriter"></div>
+    </div>
+
+    <!-- CDN Link for particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- CDN Link for typewriter.js-->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 
+        'particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+        
+        /* To run this effect in loop set 'loop' to true */
+        const instance = new Typewriter('#typewriter', {
+            loop: true,
+            delay: 100 //speed
+        });
+
+        instance.typeString("Hi, I'm Glenda <img src='wave.png' alt='wave-hand' style='height: 80px;'> ")
+            .pauseFor(300)
+            .deleteAll()
+            .typeString("I'm a Software <br>Engineer.<img src='heart.png' alt='heart' style='height: 60px;'>")
+            .pauseFor(300)
+            .deleteAll()
+            .typeString("I am currently <br>working with <br> OpenSSF.<img src='laptop.png' alt='laptop' style='height: 65px;'>")
+            .pauseFor(300)
+            .deleteAll()
+            .typeString("Happy you are  <br>here!<img src='happy-face.png' alt='happy-face' style='height: 65px;'>")
+            .pauseFor(300)
+            .deleteAll()
+            .start();
+    </script>
+</body>
+</html>

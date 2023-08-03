@@ -1,0 +1,16 @@
+#particles-js {
+    background-color: #6f42c1;
+    height: 860px;
+    width: 100%;
+}
+
+#typewriter {
+    position: absolute;
+    font-size: 75px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    width: 900px;
+    text-align: center;
+    margin: 350px 600px;
+    color: #FBCCAD;
+}
